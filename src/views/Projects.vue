@@ -13,16 +13,20 @@
 					<portfolio-seperator />
 				</section>
 				<section class="btn-group">
-					<portfolio-button
-						v-show="project.hasLivePreview"
-						@click.native="openExternalLink(project.livePreview)"
-						text="Live Preview"
-					/>
-					<portfolio-button
-						v-show="project.hasSourceCode"
-						@click.native="openExternalLink(project.sourceCode)"
-						text="Source Code"
-					/>
+					<a target="_blank" style="text-decoration: none;" :href="project.livePreview">
+						<portfolio-button
+							v-show="project.hasLivePreview"
+							@click.native="openExternalLink(project.livePreview)"
+							text="Live Preview"
+						/>
+					</a>
+					<a target="_blank" style="text-decoration: none;" :href="project.sourceCode">
+						<portfolio-button
+							v-show="project.hasSourceCode"
+							@click.native="openExternalLink(project.sourceCode)"
+							text="Source Code"
+						/>
+					</a>
 				</section>
 				<section class="screenshots" v-show="project.screenshots.length">
 					<h3 class="title" style="margin-bottom: 15px;">Screenshots</h3>

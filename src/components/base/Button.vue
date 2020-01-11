@@ -27,6 +27,7 @@ export default Vue.extend({
 	border-radius: 5px;
 	box-shadow: 0px 3px rgba($color: $accentShadow, $alpha: 1);
 	font-size: 16px;
+	color: black;
 
 	transition: box-shadow 0.15s ease-in, transform 0.15s ease-in-out;
 

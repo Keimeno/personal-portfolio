@@ -13,12 +13,13 @@
 					<portfolio-seperator />
 				</section>
 				<section class="btn-group">
-					<portfolio-button
-						v-for="(pullRequest, index) in project.myPullRequests"
-						:key="index"
-						@click.native="openExternalLink(pullRequest.url)"
-						:text="pullRequest.name"
-					/>
+					<a style="text-decoration: none;" target="_blank" :href="pullRequest.url">
+						<portfolio-button
+							v-for="(pullRequest, index) in project.myPullRequests"
+							:key="index"
+							:text="pullRequest.name"
+						/>
+					</a>
 				</section>
 				<section v-show="project.hasReadme" class="readme">
 					<h3 class="title" style="margin-bottom: 25px;">README</h3>

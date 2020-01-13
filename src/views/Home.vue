@@ -106,12 +106,12 @@ export default Vue.extend({
 				transform: translateZ(0);
 
 				// need to set the box shadow to this initially, as css columns cuts off the upper rights border
-				box-shadow: 0px 3px 0px 0px rgba($color: #000000, $alpha: 0);
+				box-shadow: 0px 3px rgba($color: #000000, $alpha: 0);
 
 				transition: all 0.15s;
 
 				&:hover {
-					transform: translateY(-3px);
+					transform: translate3d(0, -3px, 0);
 					box-shadow: 0px 3px rgba($color: #000000, $alpha: 0.5);
 				}
 

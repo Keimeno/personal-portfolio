@@ -49,7 +49,7 @@
 						<div ref="link-open-source-items">
 							<ul>
 								<li
-									v-for="(link, index) in projects"
+									v-for="(link, index) in openSource"
 									@click="openInternalLink('open-source', { id: link.to })"
 									:key="index"
 								>{{ link.displayName }}</li>
@@ -76,7 +76,10 @@ import linkMixin from "@/mixins/link.mixin";
 
 import TList from "@/types/ListType";
 
-import { GET_PROJECTS_LIST } from "../../store/types/getters.type";
+import {
+	GET_PROJECTS_LIST,
+	GET_OPEN_SOURCE_LIST
+} from "../../store/types/getters.type";
 
 export default Vue.extend({
 	name: "PortfolioHeader",
@@ -89,10 +92,11 @@ export default Vue.extend({
 		caretDown:
 			'<svg height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Angle Down</title><desc>A line styled icon from Orion Icon Library.</desc><path data-name="layer1"fill="none" stroke="#f8f8f8" stroke-miterlimit="10" stroke-width="5" d="M20 26l11.994 14L44 26"stroke-linejoin="round" stroke-linecap="round"></path></svg>',
 		activePage: "",
-		projects: [] as TList[]
+		projects: [] as TList[],
+		openSource: [] as TList[]
 	}),
 	methods: {
-		...mapGetters([GET_PROJECTS_LIST]),
+		...mapGetters([GET_PROJECTS_LIST, GET_OPEN_SOURCE_LIST]),
 		openInternalLink(name: string, params?: object) {
 			(this as any).openInternalLinkByName(name, params);
 			// @ts-ignore
@@ -130,6 +134,7 @@ export default Vue.extend({
 
 		// retrieves projects list
 		this.projects = this[GET_PROJECTS_LIST]();
+		this.openSource = this[GET_OPEN_SOURCE_LIST]();
 	},
 	watch: {
 		$route() {

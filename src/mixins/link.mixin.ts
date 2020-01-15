@@ -1,6 +1,7 @@
+import Vue from 'vue';
 import vm from '@/main';
 
-const link = {
+const link = Vue.extend({
 	methods: {
 		openExternalLink(link: string) {
 			window.open(link, '_blank');
@@ -12,6 +13,6 @@ const link = {
 			vm.$router.push({ name, params: { ...(params || {}) } });
 		}
 	}
-};
+});
 
 export default link;

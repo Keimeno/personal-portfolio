@@ -3,7 +3,7 @@
 		<div class="container grid">
 			<nav>
 				<div class="branding">
-					<p @click="openInternalLink('home')" class="branding__text">Keimeno.party</p>
+					<p @click="openInternalLink('home')" class="branding__text">Constantin Metz</p>
 				</div>
 				<div class="hamburger-menu">
 					<p class="hamburger-menu__text" @click="active = !active">

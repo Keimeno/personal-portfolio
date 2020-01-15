@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<p class="copyright-notice">Copyright (&copy;) Keimeno</p>
+		<p class="copyright-notice">Copyright (&copy;) Constantin Metz</p>
 	</footer>
 </template>
 

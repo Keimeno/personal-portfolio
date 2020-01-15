@@ -25,6 +25,7 @@
 					/>
 				</section>
 				<section class="screenshots" v-show="project.screenshots.length">
+					<h3 class="title" style="margin-bottom: 15px;">Screenshots</h3>
 					<div
 						v-show="index < 1 || viewMore"
 						class="screenshot"
@@ -43,14 +44,13 @@
 							v-show="project.screenshots.length !== 1 && !viewMore"
 						/>
 					</div>
-					<portfolio-seperator marginTop="40" marginBottom="70" />
+					<portfolio-seperator v-show="project.hasReadme" marginTop="40" marginBottom="70" />
 				</section>
 				<section v-show="project.hasReadme" class="readme">
 					<h3 class="title" style="margin-bottom: 25px;">Project's README</h3>
 					<portfolio-markdown-renderer :markdown="project.readme" />
 				</section>
 			</div>
-			<div v-else class="not-found">The requested parameter {{ id }} was not found</div>
 		</div>
 	</div>
 </template>
@@ -66,38 +66,19 @@ import PortfolioMarkdownRenderer from "@/components/helper/MarkdownRenderer.vue"
 import { GET_PROJECTS, GET_PROJECTS_LIST } from "../store/types/getters.type";
 import TProject from "../types/ProjectType";
 import TList from "../types/ListType";
-import linkMixin from "@/mixins/link.mixin";
+
+import projectsMixin from "@/mixins/projects.mixin";
 
 export default Vue.extend({
 	name: "Projects",
 	methods: {
 		...mapGetters([GET_PROJECTS, GET_PROJECTS_LIST])
 	},
-	components: {
-		PortfolioSeperator,
-		PortfolioButton,
-		PortfolioMarkdownRenderer
-	},
-	data: () => ({
-		viewMore: false
-	}),
-	mixins: [linkMixin],
+	mixins: [projectsMixin],
 	computed: {
-		id(): string {
-			return this.$route.params.id;
-		},
 		project(): TProject {
 			const project: TProject =
 				this[GET_PROJECTS]()["items"][(this as any).id] || null;
-
-			if (!project) {
-				// @ts-ignore: mixins not registered in typescript
-				this.openInternalLinkByName("error", {
-					message: `Project_with_id_${
-						(this as any).id
-					}_could_not_be_found.`
-				});
-			}
 
 			return project;
 		},
@@ -106,11 +87,6 @@ export default Vue.extend({
 				(el: TList) => el.to === (this as any).id
 			)[0];
 		}
-	},
-	metaInfo() {
-		return {
-			title: `- ${(this as any).id}`
-		};
 	}
 });
 </script>

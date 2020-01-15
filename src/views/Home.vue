@@ -13,12 +13,18 @@
 						v-for="(project, index) in projects"
 						:key="index"
 					>
-						<img
-							v-if="project.hasImage"
-							:src="require(`@/assets/projects/${project.image}.png`)"
-							alt="Neojax Image"
-						/>
-						<p v-else>{{ project.displayName }}</p>
+						<!-- 
+							Prevent default click event on <a> tag to prevent the website
+							from actually reloading, as it defeats the purpose of the SPA
+						-->
+						<a @click.prevent :href="'/projects/' + project.to">
+							<img
+								v-if="project.hasImage"
+								:src="require(`@/assets/projects/${project.image}.png`)"
+								:alt="`${project.image}`"
+							/>
+							<p v-else>{{ project.displayName }}</p>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -26,16 +32,18 @@
 				<h3 class="section__header">Open Source Contributions</h3>
 				<div class="open-source grid">
 					<div
-						@click="openInternalLinkByName('open-source', {id: openSource.to})"
+						@click="openInternalLinkByName('open-source', {id: openSource.to })"
 						v-for="(openSource, index) in openSource"
 						:key="index"
 					>
-						<img
-							v-if="openSource.hasImage"
-							:src="require(`@/assets/open-source/${openSource.image}.png`)"
-							alt="Neojax Image"
-						/>
-						<p v-else>{{ openSource.displayName }}</p>
+						<a @click.prevent :href="'/open-source/' + openSource.to">
+							<img
+								v-if="openSource.hasImage"
+								:src="require(`@/assets/open-source/${openSource.image}.png`)"
+								:alt="`${openSource.image}`"
+							/>
+							<p v-else>{{ openSource.displayName }}</p>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -113,6 +121,11 @@ export default Vue.extend({
 				&:hover {
 					transform: translate3d(0, -3px, 0);
 					box-shadow: 0px 3px rgba($color: #000000, $alpha: 0.5);
+				}
+
+				a {
+					text-decoration: none;
+					color: unset;
 				}
 
 				img {

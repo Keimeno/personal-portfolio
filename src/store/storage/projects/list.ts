@@ -1,3 +1,5 @@
+import TList from '@/types/ListType';
+
 const list = [
 	{
 		to: 'neojax',
@@ -6,43 +8,40 @@ const list = [
 		displayName: 'neojax'
 	},
 	{
+		to: 'neruxvace-chatlog',
+		hasImage: true,
+		image: 'chatlog',
+		displayName: 'Neruxvace Chatlog Panel'
+	},
+	{
+		to: 'neruxvace-statistics',
+		hasImage: true,
+		image: 'statistics',
+		displayName: 'Neruxvace Statistics Panel'
+	},
+	{
+		to: 'portfolio',
+		hasImage: true,
+		image: 'portfolio',
+		displayName: 'Portfolio'
+	},
+	{
 		to: 'html-2-pdf',
 		hasImage: false,
 		displayName: 'HTML2PDF'
 	},
 	{
-		to: 'neojax-2',
+		to: 'neruxvace-redeem',
 		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
+		image: 'redeem',
+		displayName: 'Neruxvace Redeem-Code Panel'
 	},
 	{
-		to: 'html-2-pdf-2',
-		hasImage: false,
-		displayName: 'HTML2PDF'
-	},
-	{
-		to: 'neojax-3',
+		to: 'dashboard',
 		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf-3',
-		hasImage: false,
-		displayName: 'HTML2PDF'
-	},
-	{
-		to: 'neojax-4',
-		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf-4',
-		hasImage: false,
-		displayName: 'HTML2PDF'
+		image: 'dashboard',
+		displayName: 'Dashboard (unfinished)'
 	}
-];
+] as TList[];
 
 export default list;

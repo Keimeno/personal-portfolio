@@ -1,7 +1,9 @@
 <template>
 	<div id="app">
 		<portfolio-header />
-		<router-view />
+		<keep-alive>
+			<router-view />
+		</keep-alive>
 		<portfolio-footer />
 	</div>
 </template>

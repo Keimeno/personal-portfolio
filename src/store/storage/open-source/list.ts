@@ -1,48 +1,16 @@
+import TList from '@/types/ListType';
+
 const list = [
 	{
-		to: 'neojax',
-		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf',
+		to: 'linux-mint-cinnamon',
 		hasImage: false,
-		displayName: 'HTML2PDF'
+		displayName: 'Linux Mint Cinnamon Themes'
 	},
 	{
-		to: 'neojax-2',
-		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf-2',
+		to: 'vue-moveable',
 		hasImage: false,
-		displayName: 'HTML2PDF'
-	},
-	{
-		to: 'neojax-3',
-		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf-3',
-		hasImage: false,
-		displayName: 'HTML2PDF'
-	},
-	{
-		to: 'neojax-4',
-		hasImage: true,
-		image: 'neojax',
-		displayName: 'neojax'
-	},
-	{
-		to: 'html-2-pdf-4',
-		hasImage: false,
-		displayName: 'HTML2PDF'
+		displayName: 'Vue Moveable'
 	}
-];
+] as TList[];
 
 export default list;

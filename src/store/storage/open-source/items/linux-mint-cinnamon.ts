@@ -1,0 +1,22 @@
+import TOpenSource from '@/types/OpenSourceType';
+
+const linuxMintCinnamon = {
+	description: 'Linux Mint Cinnamon Themes',
+	myPart:
+		'Uploading my own theme pack, and making it \navailable for download to Cinnamon users.\nIt was written in CSS.',
+	hasReadme: true,
+	readme:
+		'<p align="center">\n	<img src="https://i.imgur.com/SjvwtGV.png" style="width: 100%;"/><br />\n	<a href="https://www.codacy.com/manual/Keimeno/linuxMintCinnamon?utm_source=github.com&utm_medium=referral&utm_content=Keimeno/linuxMintCinnamon&utm_campaign=Badge_Grade">\n		<img src="https://api.codacy.com/project/badge/Grade/2964d5b17a2c4bf8957bc205160157ae" alt="CodacyBadge" />\n	</a>\n	<a href="https://api.codeclimate.com/v1/badges/fc83b2376da001e0df6b/maintainability">\n		<img src="https://api.codeclimate.com/v1/badges/fc83b2376da001e0df6b/maintainability" alt="Maintainability" />\n	</a>\n	<a href="https://travis-ci.com/Keimeno/linuxMintCinnamon">\n		<img src="https://travis-ci.com/Keimeno/linuxMintCinnamon.svg?branch=develop" alt="Build status" />\n	</a>\n	<a href="https://coveralls.io/github/Keimeno/linuxMintCinnamon?branch=develop">\n		<img src="https://coveralls.io/repos/github/Keimeno/linuxMintCinnamon/badge.svg?branch=develop" alt="Coverage status" />\n	</a>\n	<a href="https://npmjs.com/package/linuxMintCinnamon">\n		<img src="https://img.shields.io/npm/l/linuxMintCinnamon.svg" alt="linuxMintCinnamon npm" />\n	</a>\n	<a href="https://npmjs.com/package/linuxMintCinnamon">\n		<img src="https://img.shields.io/npm/v/linuxMintCinnamon.svg" alt="linuxMintCinnamon npm" />\n	</a>\n</p>\n\n## Description\n\nneojax is a lightweight alternative to axios, with native typescript support.\n\n## Setup\n\n### npm\n\n```bash\nnpm install linuxMintCinnamon --save\n```\n\n### cdn\n\n```html\n<script\n	src="https://cdn.jsdelivr.net/npm/linuxMintCinnamon@latest"\n	type="text/javascript"\n></script>\n```\n\n## Documentation\n\nTo import in the module do:\n\n```javascript\nimport Neojax from \'linuxMintCinnamon\';\n```\n\nWith typescript you can as well import the different types\n\n```typescript\nimport Neojax, { NeojaxResponse, NeojaxError } from \'linuxMintCinnamon\';\n```\n\nThis will give you a new Neojax instance, without any preset options.\n\nIf you want to predefine the baseUrl or headers you can create a new instance from this object, with the create() method.\n\n```javascript\nconst linuxMintCinnamon = Neojax.create({\n	baseUrl: \'https://example.org/\',\n	headers: {\n		Authorization: \'Bearer mytoken\'\n	}\n});\n```\n\nTo send out a basic get request:\n\n```javascript\nNeojax.get(url, options)\n	.then(response => {\n		console.log(response.data);\n	})\n	.catch(error => {\n		console.log(error.message);\n		console.log(error.response.data);\n	});\n```\n\nYou can also use async/await, because it returns a Promise.\n\n```javascript\nconst response = await Neojax.get(url, options);\n```\n\nThis works similarly in typescript:\n\n```typescript\nNeojax.get(url, options)\n	.then((response: NeojaxResponse) => {\n		console.log(response.data);\n	})\n	.catch((error: NeojaxError) => {\n		console.log(error.message);\n		console.log(error.message.data);\n	});\n```\n\nAnd with async/await it looks like the following:\n\n```typescript\nconst response: NeojaxResponse = await Neojax.get(url, options);\n```\n\nA post request looks similar, with the main difference, that you have an optional data parameter.\n\n```javascript\nconst response = await Neojax.post(url, data, options);\n```\n\nIt is now possible to change global defaults. (As well as those defined in your instance).\n\n```typescript\n// global\nNeojax.options.headers[\'Content-Type\'] = \'application/json; charset=utf-8\';\n\n// for instances\nneojax.options.baseUrl = \'https://api.example.org/\';\n```\n\nThe currently supported request types are:\n\n-   GET\n-   POST\n-   PUT\n-   DELETE\n\n## Contribute\n\nIf you want to contribute to this project please make sure to follow our guidelines.\n\n-   You need to use tabs for indentation.\n-   Explain your changes in the description of your pull request.\n-   You may build the package locally, but you don\'t have to commit it, as this is done automatically.\n\nOther than that, feel free to support linuxMintCinnamon!\n',
+	myPullRequests: [
+		{
+			name: '#606',
+			url: 'https://github.com/linuxmint/cinnamon-spices-themes/pull/606'
+		},
+		{
+			name: '#607',
+			url: 'https://github.com/linuxmint/cinnamon-spices-themes/pull/607'
+		}
+	]
+} as TOpenSource;
+
+export default linuxMintCinnamon;

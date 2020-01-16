@@ -13,12 +13,14 @@
 					<portfolio-seperator />
 				</section>
 				<section class="btn-group">
-					<a style="text-decoration: none;" target="_blank" :href="pullRequest.url">
-						<portfolio-button
-							v-for="(pullRequest, index) in project.myPullRequests"
-							:key="index"
-							:text="pullRequest.name"
-						/>
+					<a
+						v-for="(pullRequest, index) in project.myPullRequests"
+						:key="index"
+						style="text-decoration: none;"
+						target="_blank"
+						:href="pullRequest.url"
+					>
+						<portfolio-button :text="pullRequest.name" />
 					</a>
 				</section>
 				<section v-show="project.hasReadme" class="readme">
@@ -77,7 +79,7 @@ export default Vue.extend({
 			display: flex;
 			margin-bottom: 100px;
 
-			> div {
+			> a {
 				margin-right: 5px;
 			}
 		}

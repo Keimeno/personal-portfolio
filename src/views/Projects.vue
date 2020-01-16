@@ -107,7 +107,7 @@ export default Vue.extend({
 			display: flex;
 			margin-bottom: 100px;
 
-			> div {
+			> a {
 				margin-right: 5px;
 			}
 		}

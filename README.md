@@ -17,7 +17,7 @@ This is my personal portfolio website. If you're interested in using it for your
 
 To configure this website to your own, you need to change the following files:
 
-```
+```bash
 src/
     store/
         storage/

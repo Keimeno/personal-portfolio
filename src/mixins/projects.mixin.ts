@@ -7,6 +7,7 @@ import PortfolioMarkdownRenderer from '@/components/helper/MarkdownRenderer.vue'
 import linkMixin from '@/mixins/link.mixin';
 
 export default Vue.extend({
+	name: 'ProjectsMixin',
 	computed: {
 		id(): string {
 			return this.$route.params.id;

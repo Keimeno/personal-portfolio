@@ -1,16 +1,16 @@
 import Vue from 'vue';
-import vm from '@/main';
 
 const link = Vue.extend({
+	name: 'LinkMixin',
 	methods: {
 		openExternalLink(link: string) {
 			window.open(link, '_blank');
 		},
 		openInternalLinkByPath(path: string) {
-			vm.$router.push({ path });
+			this.$router.push({ path });
 		},
 		openInternalLinkByName(name: string, params?: object) {
-			vm.$router.push({ name, params: { ...(params || {}) } });
+			this.$router.push({ name, params: { ...(params || {}) } });
 		}
 	}
 });

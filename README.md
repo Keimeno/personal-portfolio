@@ -1,5 +1,8 @@
 # Personal Portfolio
 
+[![Coverage Status](https://coveralls.io/repos/github/Keimeno/personal-portfolio/badge.svg)](https://coveralls.io/github/Keimeno/personal-portfolio)
+[![Build Status](https://travis-ci.com/Keimeno/personal-portfolio.svg?branch=develop)](https://travis-ci.com/Keimeno/personal-portfolio)
+
 ## Description
 
 This is my personal portfolio website. If you're interested in using it for yourself, go by the following steps.

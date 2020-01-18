@@ -1,11 +1,9 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Links from '@/components/base/Links.vue';
-import linkMixin from '@/mixins/link.mixin';
-import { VueConstructor } from 'vue/types/umd';
-import VueRouter from 'vue-router';
 import router from '@/router';
+import getLocalVue from '../getLocalVue';
 
-let localVue: VueConstructor<Links>;
+let localVue = getLocalVue();
 
 (process as any).on(
 	'unhandledRejection',
@@ -19,12 +17,6 @@ let localVue: VueConstructor<Links>;
 );
 
 describe('links tests', () => {
-	beforeAll(() => {
-		localVue = createLocalVue();
-		localVue.use(VueRouter);
-		localVue.mixin(linkMixin);
-	});
-
 	it('can activate low contrast mode', () => {
 		const hasLowContrastBackground = true;
 		const wrapper = shallowMount(Links, {

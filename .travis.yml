@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- stable
+script:
+- npm run test:unit
+- npm run build
+branches:
+  only:
+  - develop
+env:
+  global:
+    secure: WrrbmLhFbMkmm/cAx12A9UON2GK7eu4y1pZWQq1EQk6Ii7cVTqJXH9MVLdWMG3dG8wvzir2oX31HfFw8GgKyJ45rUVLh4j5h216IxKhF18GsaixQf/ubVrcx5enJWjWEk3ydXYHRAThjqm894/ifHVxb60i3Z7wT9Ru+P3DmgGBmT3J6L9LZtBr8TelHCBgCvq0M/+WXSKwpVCWO1w6+qugBzDlHXPtFfPjMDYGQdhOCiknEydMv0/0hHl2YVOxN8yZ4Yk6QvS+w6q6K+cmvIxUk1PbHVku/QtUwIrH89Fvdg/qpmK2w/hvrGB2CcgwEQYbkHlSYC436xxROC3v1xynJi8gJxILNnWghySeGU67xvuo0r/ICtDDwgTnFjkRFc7ltT4vOh6iE3O7X5qadBCcHuDGY83r8jGWGsgksa0JukIkZXjuitsRlxPxLlRrKwwvuTs4nBFfaF1whMXnZ4EUBVVnKMx5qcM+J/kPaXmeG+3T6P5jLs2gxZNC9eofRUj2xLL8Gy6E0lRji+ySve+Wq6U9Sn7Pxba3VAMuMaKfjBtnEXN66XLQx20WH36mwBB8/U6Wfz3NnrMjVf82py5vihHP6EIsiXh1bWlrrrCom49n4POIcZ0g6euriewFNCKYAuapqVo3RTd4KGy6OAu9j+MhSzkqzh6NZlDZ8QMA=

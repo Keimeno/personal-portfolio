@@ -2,8 +2,6 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Projects from '@/views/Projects.vue';
 import router from '@/router';
 import store from '@/store';
-import getLocalVue from '../getLocalVue';
-import { GET_PROJECTS_LIST, GET_PROJECTS } from '@/store/types/getters.type';
 import { VueConstructor } from 'vue/types/umd';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';

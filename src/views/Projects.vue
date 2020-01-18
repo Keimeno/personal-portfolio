@@ -14,18 +14,10 @@
 				</section>
 				<section class="btn-group">
 					<a target="_blank" style="text-decoration: none;" :href="project.livePreview">
-						<portfolio-button
-							v-show="project.hasLivePreview"
-							@click.native="openExternalLink(project.livePreview)"
-							text="Live Preview"
-						/>
+						<portfolio-button v-show="project.hasLivePreview" text="Live Preview" />
 					</a>
 					<a target="_blank" style="text-decoration: none;" :href="project.sourceCode">
-						<portfolio-button
-							v-show="project.hasSourceCode"
-							@click.native="openExternalLink(project.sourceCode)"
-							text="Source Code"
-						/>
+						<portfolio-button v-show="project.hasSourceCode" text="Source Code" />
 					</a>
 				</section>
 				<section class="screenshots" v-show="project.screenshots.length">

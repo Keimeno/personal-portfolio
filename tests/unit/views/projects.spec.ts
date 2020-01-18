@@ -7,8 +7,9 @@ import { GET_PROJECTS_LIST, GET_PROJECTS } from '@/store/types/getters.type';
 import { VueConstructor } from 'vue/types/umd';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
+import Vue from 'vue';
 
-let localVue: VueConstructor<Projects>;
+let localVue: VueConstructor<Vue>;
 
 const id = 'neojax';
 const $route = {

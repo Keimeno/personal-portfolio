@@ -1,16 +1,17 @@
 <template>
   <div class="links">
-    <div class="image" v-for="(link, index) in links" :key="index">
-      <img
-        :src="require(`@/assets/branding/${link.img}.png`)"
-        :alt="`${link.img} logo`"
-        :class="{ 
-					inverted: link.invertedOnLowContrast && hasLowContrastBackground,
-					border: link.hasBorder
-				}"
-        @click="openExternalLink(link.to)"
-      />
-    </div>
+    <a :href="link.to" target="_blank" v-for="(link, index) in links" :key="index" rel="noopener">
+      <div class="image">
+        <img
+          :src="require(`@/assets/branding/${link.img}.png`)"
+          :alt="`${link.img} logo`"
+          :class="{ 
+            inverted: link.invertedOnLowContrast && hasLowContrastBackground,
+            border: link.hasBorder
+          }"
+        />
+      </div>
+    </a>
   </div>
 </template>
 

@@ -13,11 +13,15 @@ const localVue = getLocalVue();
 //! watch ./projects.spec.ts for details about this implementation
 describe('open source view tests', () => {
   it('store can be accessed', () => {
-    // const wrapper = shallowMount(OpenSource, {
-    // 	localVue,
-    // 	router,
-    // 	store
-    // });
+    try {
+      const wrapper = shallowMount(OpenSource, {
+        localVue,
+        router,
+        store,
+      });
+    } catch (e) {
+      console.error(e);
+    }
 
     expect(true).toBeTruthy();
   });

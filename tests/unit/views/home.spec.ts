@@ -4,16 +4,16 @@ import router from '@/router';
 import store from '@/store';
 import getLocalVue from '../getLocalVue';
 
-let localVue = getLocalVue();
+const localVue = getLocalVue();
 
 describe('home view tests', () => {
-	it('sets correct computed properties', () => {
-		const wrapper = shallowMount(Home, {
-			localVue,
-			router,
-			store
-		});
+  it('sets correct computed properties', () => {
+    const wrapper = shallowMount(Home, {
+      localVue,
+      router,
+      store,
+    });
 
-		expect((wrapper.vm as any).projects).toBeTruthy();
-	});
+    expect((wrapper.vm as any).projects).toBeTruthy();
+  });
 });

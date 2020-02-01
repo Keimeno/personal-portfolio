@@ -4,25 +4,21 @@ import router from '@/router';
 import store from '@/store';
 import getLocalVue from '../getLocalVue';
 import {
-	GET_OPEN_SOURCE,
-	GET_OPEN_SOURCE_LIST
+  GET_OPEN_SOURCE,
+  GET_OPEN_SOURCE_LIST,
 } from '@/store/types/getters.type';
 
-let localVue = getLocalVue();
+const localVue = getLocalVue();
 
 //! watch ./projects.spec.ts for details about this implementation
 describe('open source view tests', () => {
-	it('store can be accessed', () => {
-		try {
-			const wrapper = shallowMount(OpenSource, {
-				localVue,
-				router,
-				store
-			});
-		} catch (e) {
-			e;
-		}
+  it('store can be accessed', () => {
+    // const wrapper = shallowMount(OpenSource, {
+    // 	localVue,
+    // 	router,
+    // 	store
+    // });
 
-		expect(true).toBeTruthy();
-	});
+    expect(true).toBeTruthy();
+  });
 });

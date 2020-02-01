@@ -9,12 +9,12 @@ This is my personal portfolio website. If you're interested in using it for your
 
 ## Setup
 
--   npm i
--   npm start (for development purposes)
--   npm i -g firebase
--   firebase init
--   npm run build
--   npm run deploy
+- npm i
+- npm start (for development purposes)
+- npm i -g firebase
+- firebase init
+- npm run build
+- npm run deploy
 
 ## Configuration
 

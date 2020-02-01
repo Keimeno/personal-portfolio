@@ -9,40 +9,40 @@ import ErrorComponent from '@/views/Error.vue';
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
-	{
-		path: '/',
-		name: 'home',
-		component: Home
-	},
-	{
-		path: '/projects/:id',
-		name: 'projects',
-		component: Projects
-	},
-	{
-		path: '/open-source/:id',
-		name: 'open-source',
-		component: OpenSource
-	},
-	{
-		path: '/error/:message',
-		name: 'error',
-		component: ErrorComponent
-	},
-	{
-		path: '*',
-		redirect: '/error/404_-_Not_Found'
-	}
+  {
+    path: '/',
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/projects/:id',
+    name: 'projects',
+    component: Projects,
+  },
+  {
+    path: '/open-source/:id',
+    name: 'open-source',
+    component: OpenSource,
+  },
+  {
+    path: '/error/:message',
+    name: 'error',
+    component: ErrorComponent,
+  },
+  {
+    path: '*',
+    redirect: '/error/404_-_Not_Found',
+  },
 ];
 
 const router = new VueRouter({
-	mode: 'history',
-	base: process.env.BASE_URL,
-	routes,
-	scrollBehavior: () => ({
-		x: 0,
-		y: 0
-	})
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes,
+  scrollBehavior: () => ({
+    x: 0,
+    y: 0,
+  }),
 });
 
 export default router;

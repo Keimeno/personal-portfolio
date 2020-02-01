@@ -4,12 +4,12 @@ import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 
 export default () => {
-	const localVue = createLocalVue();
+  const localVue = createLocalVue();
 
-	localVue.use(VueRouter);
-	localVue.use(Vuex);
+  localVue.use(VueRouter);
+  localVue.use(Vuex);
 
-	localVue.mixin(projectsMixin);
+  localVue.mixin(projectsMixin);
 
-	return localVue;
+  return localVue;
 };

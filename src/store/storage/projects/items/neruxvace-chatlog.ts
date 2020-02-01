@@ -3,7 +3,7 @@ import TProject from '@/types/ProjectType';
 const neruxvaceChatlog = {
   description: 'Chatlog lookup interface',
   background:
-    'A simple interface for everyone to review chatlogs,\n that were recorded between two participants.',
+    'A simple interface for everyone to review chatlogs,\n that were recorded between two participants.\nIt was written in PHP.',
   hasLivePreview: true,
   livePreview: 'https://chat.neruxvace.net/1xzlrmv',
   hasSourceCode: false,

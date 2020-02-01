@@ -3,7 +3,9 @@
     <div class="container grid">
       <nav>
         <div class="branding">
-          <p @click="openInternalLink('home')" class="branding__text">Constantin Metz</p>
+          <a @click.prevent href="/" target="_blank">
+            <p @click="openInternalLink('home')" class="branding__text">Constantin Metz</p>
+          </a>
         </div>
         <div class="hamburger-menu">
           <p class="hamburger-menu__text" @click="active = !active">

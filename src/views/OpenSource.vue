@@ -25,7 +25,7 @@
         </section>
         <section v-show="project.hasReadme" class="readme">
           <h3 class="title" style="margin-bottom: 25px;">README</h3>
-          <portfolio-markdown-renderer :markdown="project.readme" />
+          <portfolio-markdown-renderer :markdown="project.readme || ''" />
         </section>
       </div>
     </div>

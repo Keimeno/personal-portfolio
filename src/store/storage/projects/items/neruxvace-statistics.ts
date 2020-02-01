@@ -3,7 +3,7 @@ import TProject from '@/types/ProjectType';
 const neruxvaceStatistics = {
   description: 'Webpanel to show userstatistics and ranking',
   background:
-    'A SSR Webpanel made with VueJS and PHP to show userstatistics and rankings.\nIt has 3 pages in total, global userranking, player overview and\na detailed page about a specific gamemode a player has played.',
+    "A SSR Webpanel made with VueJS and PHP to show userstatistics and rankings.\nIt has 3 pages in total, global userranking, player overview and\na detailed page about a specific gamemode a player has played.\nSome things don't work anymore, as the API it was depending on is offline.",
   hasLivePreview: true,
   livePreview: 'https://neruxvace.net/player/Keimeno',
   hasSourceCode: false,

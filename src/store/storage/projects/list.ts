@@ -8,6 +8,12 @@ const list = [
     displayName: 'neojax',
   },
   {
+    to: 'portfolio',
+    hasImage: true,
+    image: 'portfolio',
+    displayName: 'Portfolio',
+  },
+  {
     to: 'neruxvace-chatlog',
     hasImage: true,
     image: 'chatlog',
@@ -18,12 +24,6 @@ const list = [
     hasImage: true,
     image: 'statistics',
     displayName: 'Neruxvace Statistics Panel',
-  },
-  {
-    to: 'portfolio',
-    hasImage: true,
-    image: 'portfolio',
-    displayName: 'Portfolio',
   },
   {
     to: 'html-2-pdf',

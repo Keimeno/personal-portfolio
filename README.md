@@ -22,22 +22,22 @@ To configure this website to your own, you need to change the following files:
 
 ```bash
 src/
-    store/
-        storage/
-			projects/
-			open-source/
-				index.ts
-				list.ts
-				items/
-					index.ts
-					...
-	assets/
-		projects/
-		open-source/
-			screenshots/
-				.../
-					...
-			...
+  store/
+    storage/
+      projects/
+      open-source/
+        index.ts
+        list.ts
+        items/
+          index.ts
+          ...
+  assets/
+    projects/
+    open-source/
+      screenshots/
+        .../
+          ...
+      ...
 
 ```
 

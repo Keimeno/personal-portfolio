@@ -7,7 +7,7 @@
       </section>
       <section>
         <h3 class="section__header">My Projects</h3>
-        <div class="projects grid">
+        <masonry :cols="2" :gutter="6" class="projects grid">
           <div
             @click="openInternalLinkByName('projects', {id: project.to})"
             v-for="(project, index) in projects"
@@ -26,7 +26,7 @@
               <p v-else>{{ project.displayName }}</p>
             </a>
           </div>
-        </div>
+        </masonry>
       </section>
       <section>
         <h3 class="section__header">Open Source Contributions</h3>
@@ -97,16 +97,11 @@ export default Vue.extend({
 
     .grid {
       width: 100%;
-      column-width: 50%;
-      column-count: 2;
-      column-gap: 6px;
       padding: 5px;
-      break-inside: avoid;
 
       div {
         user-select: none;
         cursor: pointer;
-        break-inside: avoid-column;
         border: 1px solid black;
         border-radius: 5px;
         margin-bottom: 10px;

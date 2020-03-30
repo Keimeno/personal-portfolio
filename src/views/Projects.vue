@@ -22,17 +22,19 @@
         </section>
         <section class="screenshots" v-show="project.screenshots.length">
           <h3 class="title" style="margin-bottom: 15px;">Screenshots</h3>
-          <div
-            v-show="index < 1 || viewMore"
-            class="screenshot"
+          <a
+            :href="require(`@/assets/projects/screenshots/${id}/${screenshot}.png`)"
             v-for="(screenshot, index) in project.screenshots"
             :key="index"
+            v-show="index < 1 || viewMore"
           >
-            <img
-              :src="(index < 1 || viewMore) ? require(`@/assets/projects/screenshots/${id}/${screenshot}.png`) : ''"
-              :alt="id + ' ' + screenshot"
-            />
-          </div>
+            <div class="screenshot">
+              <img
+                :src="(index < 1 || viewMore) ? require(`@/assets/projects/screenshots/${id}/${screenshot}.png`) : ''"
+                :alt="id + ' ' + screenshot"
+              />
+            </div>
+          </a>
           <div class="view-more">
             <portfolio-button
               @click.native="viewMore = true"

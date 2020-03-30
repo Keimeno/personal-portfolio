@@ -29,7 +29,7 @@
             :key="index"
           >
             <img
-              :src="require(`@/assets/projects/screenshots/${id}/${screenshot}.png`)"
+              :src="(index < 1 || viewMore) ? require(`@/assets/projects/screenshots/${id}/${screenshot}.png`) : ''"
               :alt="id + ' ' + screenshot"
             />
           </div>

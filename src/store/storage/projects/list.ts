@@ -2,6 +2,17 @@ import TList from '@/types/ListType';
 
 const list = [
   {
+    to: 'oidc-server',
+    hasImage: false,
+    displayName: 'OpenID Connect Server',
+  },
+  {
+    to: 'key-redeem-feedback',
+    hasImage: true,
+    image: 'key-redeem-feedback',
+    displayName: 'Key Redeem & Feedback',
+  },
+  {
     to: 'neojax',
     hasImage: true,
     image: 'neojax',
@@ -12,6 +23,21 @@ const list = [
     hasImage: true,
     image: 'portfolio',
     displayName: 'Portfolio',
+  },
+  {
+    to: 'components-library',
+    hasImage: false,
+    displayName: 'Components Library',
+  },
+  {
+    to: 'core-library',
+    hasImage: false,
+    displayName: 'Core Library',
+  },
+  {
+    to: 'fullstack-template',
+    hasImage: false,
+    displayName: 'Fullstack Template',
   },
   {
     to: 'neruxvace-chatlog',
@@ -29,6 +55,12 @@ const list = [
     to: 'html-2-pdf',
     hasImage: false,
     displayName: 'HTML2PDF',
+  },
+  {
+    to: 'chat-moderation',
+    hasImage: true,
+    image: 'chat-moderation',
+    displayName: 'Chat Moderation',
   },
   {
     to: 'neruxvace-redeem',

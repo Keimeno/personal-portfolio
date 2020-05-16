@@ -2,10 +2,6 @@ const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 
 module.exports = {
-  publicPath:
-    process.env.VUE_APP_BUILD_MODE === 'production'
-      ? process.env.VUE_APP_PROD_BASE_URL
-      : process.env.VUE_APP_STAGING_BASE_URL,
   devServer: {
     disableHostCheck: true,
   },

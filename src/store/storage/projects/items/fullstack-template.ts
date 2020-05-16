@@ -6,7 +6,7 @@ const fullstackTemplate = {
     'Written in VueJS, TypeScript and NodeJS.\nSupplies an extensive scheme for building efficient RESTful services\nand vue apps, with unit-/integration tests.',
   hasLivePreview: false,
   hasSourceCode: true,
-  sourceCode: 'https://github.com/LuminuNET/key-redeem-feedback',
+  sourceCode: 'https://github.com/LuminuNET/fullstack-template',
   screenshots: [],
   hasReadme: true,
   readme:

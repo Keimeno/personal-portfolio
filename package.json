@@ -20,7 +20,7 @@
     "posttest": "npm run check"
   },
   "dependencies": {
-    "marked": "^0.8.0",
+    "marked": "^1.1.1",
     "vue": "^2.6.10",
     "vue-masonry-css": "^1.0.3",
     "vue-meta": "^2.3.2",
